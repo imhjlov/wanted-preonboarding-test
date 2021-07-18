@@ -11,8 +11,14 @@ import {
 } from "./NavbarElements";
 
 import Sidebar from "../Sidebar/index";
+import NavSub from "./NavSub";
 
 const Navbar = ({ toggle }) => {
+  const [navSub, setNavSub] = useState(false);
+
+  const showNavSub = () => setNavSub(true);
+  const closeNavSub = () => setNavSub(false);
+
   return (
     <div>
       <Nav>
@@ -23,7 +29,13 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="">탐색</NavLinks>
+              <NavLinks
+                to=""
+                onMouseOver={showNavSub}
+                onMouseLeave={closeNavSub}
+              >
+                탐색
+              </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="">커리어성장</NavLinks>
@@ -44,6 +56,11 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="">Ai 합격예측</NavLinks>
             </NavItem>
           </NavMenu>
+          <NavSub
+            navSub={navSub}
+            showNavSub={showNavSub}
+            closeNavSub={closeNavSub}
+          ></NavSub>
         </NavbarContainer>
         <Sidebar></Sidebar>
       </Nav>

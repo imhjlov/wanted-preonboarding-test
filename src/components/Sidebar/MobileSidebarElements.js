@@ -19,16 +19,20 @@ export const Icon = styled.div`
   margin-top: 30px;
 `;
 export const MobileAside = styled.div`
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #0d0d0d;
-  display: grid;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  display: none;
+
+  @media screen and (max-width: 690px) {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+    display: grid;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-in-out;
+    opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+  }
 `;
 
 export const MobileAsideWrapper = styled.div`
@@ -46,7 +50,7 @@ export const MobileAsidebarLink = styled(LinkS)`
   display: flex;
   align-items: left;
   margin-left: 20px;
-  margin-top: 50px;
+  padding-top: 50px;
   font-size: 1.3rem;
   text-decoration: none;
   list-style: none;
