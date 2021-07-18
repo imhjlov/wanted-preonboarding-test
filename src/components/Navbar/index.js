@@ -1,5 +1,5 @@
-import React from "react";
-import { FaBars, FaSearch } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
 import {
   Nav,
   NavbarContainer,
@@ -8,20 +8,17 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  Aside,
-  AsideMenu,
-  AsideItem,
-  AsideLink,
-  NavBtnLink,
 } from "./NavbarElements";
 
-const Navbar = () => {
+import Sidebar from "../Sidebar/index";
+
+const Navbar = ({ toggle }) => {
   return (
     <div>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">wanted</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -47,25 +44,8 @@ const Navbar = () => {
               <NavLinks to="">Ai 합격예측</NavLinks>
             </NavItem>
           </NavMenu>
-          <Aside>
-            <AsideMenu>
-              <AsideItem>
-                <AsideLink>
-                  <FaSearch />
-                </AsideLink>
-              </AsideItem>
-              <AsideItem>
-                <AsideLink to="">회원가입/로그인</AsideLink>
-              </AsideItem>
-              <AsideItem>
-                <AsideLink> | </AsideLink>
-              </AsideItem>
-              <AsideItem>
-                <NavBtnLink to="">기업서비스</NavBtnLink>
-              </AsideItem>
-            </AsideMenu>
-          </Aside>
         </NavbarContainer>
+        <Sidebar></Sidebar>
       </Nav>
     </div>
   );
