@@ -52,9 +52,6 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="">프리랜서</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="">Ai 합격예측</NavLinks>
-            </NavItem>
           </NavMenu>
           <NavSub
             navSub={navSub}
