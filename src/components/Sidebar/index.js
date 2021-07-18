@@ -18,13 +18,13 @@ const Sidebar = () => {
             </AsideLink>
           </AsideItem>
           <AsideItem>
-            <AsideLink to="">회원가입/로그인</AsideLink>
+            <AsideLink to="/">회원가입/로그인</AsideLink>
           </AsideItem>
           <AsideItem>
             <AsideLink> | </AsideLink>
           </AsideItem>
           <AsideItem>
-            <AsideBtnLink to="">기업서비스</AsideBtnLink>
+            <AsideBtnLink to="/">기업서비스</AsideBtnLink>
           </AsideItem>
         </AsideMenu>
       </Aside>
