@@ -8,7 +8,7 @@ import {
   SubBarMenuLabel,
   SubBarContainer,
   LinkIcon,
-} from "./SubNavbarElements";
+} from "./NavSubElements";
 import NavSubList from "./NavSubList";
 import { NavSubMenuData } from "../../data/NavSubMenuData";
 
