@@ -1,31 +1,44 @@
-import React from "react";
-import { FaSearch } from "react-icons/fa";
+import React, { useState } from "react";
+
 import {
   Aside,
   AsideMenu,
   AsideItem,
-  AsideLink,
+  AsideButton,
   AsideBtnLink,
+  SearchIcon,
+  NoticeIcon,
+  ProfileIcon,
+  MenuIcon,
 } from "./SidebarElements";
 import MobileSidebar from "./MobileSidebar";
 const Sidebar = (handleMobileMenu) => {
   return (
-    <div>
+    <>
       <Aside>
         <AsideMenu>
           <AsideItem>
-            <AsideLink>
-              <FaSearch />
-            </AsideLink>
+            <AsideButton>
+              <SearchIcon />
+            </AsideButton>
           </AsideItem>
           <AsideItem>
-            <AsideLink to="/">회원가입/로그인</AsideLink>
+            <AsideButton>
+              <NoticeIcon />
+            </AsideButton>
           </AsideItem>
           <AsideItem>
-            <AsideLink> | </AsideLink>
+            <AsideButton>
+              <ProfileIcon />
+            </AsideButton>
           </AsideItem>
           <AsideItem>
             <AsideBtnLink to="/">기업서비스</AsideBtnLink>
+          </AsideItem>
+          <AsideItem>
+            <AsideButton onClick={handleMobileMenu.handleMobileBtntoggle}>
+              <MenuIcon />
+            </AsideButton>
           </AsideItem>
         </AsideMenu>
         <MobileSidebar
@@ -33,7 +46,7 @@ const Sidebar = (handleMobileMenu) => {
           handleMobileBtntoggle={handleMobileMenu.handleMobileBtntoggle}
         ></MobileSidebar>
       </Aside>
-    </div>
+    </>
   );
 };
 

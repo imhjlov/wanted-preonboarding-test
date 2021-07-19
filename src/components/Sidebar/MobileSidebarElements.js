@@ -1,24 +1,8 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaUserCircle } from "react-icons/fa";
 
-export const MobileAsideLogo = styled.div``;
-
-export const CloseIcon = styled(FaTimes)`
-  color: #fff;
-`;
-
-export const Icon = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  background: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-  outline: none;
-  margin-top: 30px;
-`;
-export const MobileAside = styled.div`
+export const MobileAsideWrap = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -35,16 +19,28 @@ export const MobileAside = styled.div`
     z-index: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "999" : "-999")};
   }
 `;
+export const MobileAside = styled.div`
+`;
+export const MobileAsideheader = styled.div`
+`;
+export const MobileAsideLogo = styled.div`
+`;
+export const LogoImg = styled.image``;
+export const Icon = styled.div`
+`;
+export const CloseIcon = styled(FaTimes)`
+`;
 
-export const MobileAsideWrapper = styled.div`
+export const MobileAsideContainer = styled.div`
   color: #fff;
 `;
 
-export const MobileAsidebarMenu = styled.ul`
+export const MobileAsidebarMenuWrap = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(9, 70px);
   justify-content: start;
+export const MobileAsidebarMenuItem = styled.li`
 `;
 
 export const MobileAsidebarLink = styled(LinkS)`
@@ -71,4 +67,5 @@ export const MobileAsidebarLink = styled(LinkS)`
     border-bottom: 1px solid #fff;
     padding-bottom: 45px;
   }
+export const ProfileIcon = styled(FaUserCircle)`
 `;

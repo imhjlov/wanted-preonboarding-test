@@ -39,7 +39,6 @@ export const NavLogo = styled(LinkR)`
   text-decoration: none;
 `;
 
-export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 690px) {
