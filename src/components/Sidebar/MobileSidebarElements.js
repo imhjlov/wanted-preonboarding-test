@@ -8,14 +8,11 @@ export const MobileAsideWrap = styled.div`
   @media screen and (max-width: 768px) {
     position: fixed;
     width: 100%;
-    height: 100%;
-    background: #0d0d0d;
-    display: grid;
+    height: 500px;
+    background: #fff;
     top: 0;
     left: 0;
-    height: 0;
-    opacity: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "100%" : "0")};
-    height: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "100%" : "0")};
+    display: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "block" : "none")};
     z-index: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "999" : "-999")};
   }
 `;
@@ -48,7 +45,7 @@ export const CloseIcon = styled(FaTimes)`
 `;
 
 export const MobileAsideContainer = styled.div`
-  color: #fff;
+  color: #444;
 `;
 
 export const MobileAsidebarMenuWrap = styled.ul`
@@ -80,7 +77,7 @@ export const MobileAsidebarMenuItem = styled.li`
     border-top: 1px solid #eee;
   }
   &:nth-child(11) {
-    color: #eee;
+    color: #ddd;
   }
 `;
 export const MobileAsidebarLink = styled(LinkS)`
