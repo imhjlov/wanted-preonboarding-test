@@ -11,14 +11,33 @@ export const AsideMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  height: 50px;
-  min-width: 300px;
-  @media screen and (max-width: 690px) {
-    display: none;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
   }
 `;
 export const AsideItem = styled.li`
   color: #fff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
+  &:nth-child(5) {
+    display: none;
+  }
+  &:active {
+    border: 1px solid#fff;
+    color: #000;
+  }
+  @media screen and (max-width: 768px) {
+    &:nth-child(n + 3):nth-child(-n + 4) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: block;
+    }
+  }
 `;
 
 export const AsideButton = styled.button`

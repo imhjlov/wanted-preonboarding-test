@@ -12,16 +12,12 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
-  @media screen and (max-width: 987px) {
-    transition: 0.8 all ease;
-  }
 `;
 
 export const NavbarContainer = styled.div`
-  display: flex;
+  display: contents;
   justify-content: space-between;
-  height: 100%px;
+  height: 100%;
   z-index: 1;
   width: 100%;
   max-width: 1060px;
@@ -37,19 +33,8 @@ export const NavLogo = styled(LinkR)`
   margin-left: 0px;
   font-weight: bold;
   text-decoration: none;
-`;
-
-  display: none;
-
-  @media screen and (max-width: 690px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1rem;
-    cursor: pointer;
-    color: #fff;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -58,14 +43,28 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-
-  @media screen and (max-width: 690px) {
-    display: none;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 0;
   }
 `;
 
 export const NavItem = styled.li`
   color: #fff;
+  &:first-child {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    &:first-child {
+      display: block;
+    }
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
