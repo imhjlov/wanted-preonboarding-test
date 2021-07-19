@@ -18,6 +18,7 @@ export const SubBarMenuListLabel = styled.h3`
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 `;
 
 export const MoreDetailLink = styled(Link)`
@@ -28,8 +29,6 @@ export const MoreDetailLink = styled(Link)`
   padding-right: 20px;
   padding-bottom: 12px;
   width: 100%;
-  text-overflow: ellipsis;
-  overflow: hidden;
   text-decoration: none;
   display: block;
   cursor: pointer;

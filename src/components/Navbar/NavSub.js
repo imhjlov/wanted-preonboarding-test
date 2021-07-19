@@ -45,12 +45,8 @@ const NavSub = (navSub) => {
   ));
 
   return (
-    <NavSubBarWrap navSub={navSub.navSub}>
-      <NavSubBar
-        navSub={navSub.navSub}
-        onMouseOver={showNavSubMenu}
-        onMouseLeave={closeNavSubMenu}
-      >
+    <NavSubBarWrap navSub={navSub.navSub} onMouseOver={closeNavSubMenu}>
+      <NavSubBar navSub={navSub.navSub} onMouseOver={showNavSubMenu}>
         <SubBarContainer>
           {DetailSubMenuMap}
           <SubBarMenuWrap>{LabelSubMenuMap}</SubBarMenuWrap>
