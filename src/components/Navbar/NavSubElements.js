@@ -61,7 +61,7 @@ export const SubBarMenuWrap = styled.div`
 `;
 
 export const SubBarMenuLink = styled(Link)`
-  color: #000;
+  color: #333;
   text-decoration: none;
   display: block;
   cursor: pointer;
@@ -70,7 +70,7 @@ export const SubBarMenuLink = styled(Link)`
 
 export const SubBarMenuLabel = styled.h2`
   position: relative;
-  color: #444;
+  color: #333;
   font-size: 1.2rem;
   line-height: 20px;
   vertical-align: top;

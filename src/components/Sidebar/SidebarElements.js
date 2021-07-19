@@ -19,16 +19,15 @@ export const AsideMenu = styled.ul`
   }
 `;
 export const AsideItem = styled.li`
-  color: #fff;
+  color: #333;
   padding: 5px;
   margin: 5px;
   border-radius: 50%;
   &:nth-child(5) {
     display: none;
   }
-  &:active {
-    border: 1px solid#fff;
-    color: #000;
+  &:nth-child(2):active {
+    background-color: #36f;
   }
   @media screen and (max-width: 768px) {
     &:nth-child(n + 3):nth-child(-n + 4) {
@@ -41,7 +40,7 @@ export const AsideItem = styled.li`
 `;
 
 export const AsideButton = styled.button`
-  color: #fff;
+  color: #333;
   background-color: transparent;
   border: 0;
   display: flex;
@@ -59,6 +58,9 @@ export const SearchIcon = styled(BiSearch)`
 export const NoticeIcon = styled(FaRegBell)`
   height: 1.5em;
   width: 1.5em;
+  &:active {
+    color: #fff;
+  }
 `;
 export const ProfileIcon = styled(FaUserCircle)`
   height: 1.5em;
@@ -76,9 +78,9 @@ export const AsideBtnLink = styled(LinkR)`
   background: #fff;
   white-space: nowrap;
   padding: 5px 10px;
-  color: #010606;
+  color: #666;
   outline: none;
-  border: 1px solid #414141;
+  border: 1px solid #e1e2e3;
   cursor: point;
   text-decoration: none;
 `;
