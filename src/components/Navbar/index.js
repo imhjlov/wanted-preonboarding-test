@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
+
 import {
   Nav,
   NavbarContainer,
   NavLogo,
-  MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
@@ -26,8 +25,11 @@ const Navbar = (handleMobileMenu) => {
           <NavLogo to="/">wanted</NavLogo>
           <NavMenu>
             <NavItem>
+              <NavLinks to="/">홈</NavLinks>
+            </NavItem>
+            <NavItem>
               <NavLinks
-                to=""
+                to="/"
                 onMouseOver={showNavSub}
                 onMouseLeave={closeNavSub}
               >
@@ -35,19 +37,19 @@ const Navbar = (handleMobileMenu) => {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="">커리어성장</NavLinks>
+              <NavLinks to="/">커리어성장</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="">직군별 연봉</NavLinks>
+              <NavLinks to="/">직군별 연봉</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="">이력서</NavLinks>
+              <NavLinks to="/">이력서</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="">매치업</NavLinks>
+              <NavLinks to="/">매치업</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="">프리랜서</NavLinks>
+              <NavLinks to="/">프리랜서</NavLinks>
             </NavItem>
           </NavMenu>
           <NavSub
