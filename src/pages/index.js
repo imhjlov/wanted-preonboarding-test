@@ -3,16 +3,18 @@ import Navbar from "../components/Navbar";
 import MobileSidebar from "../components/Sidebar/MobileSidebar";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+  const mobileBtntoggle = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
     <div>
-      <Navbar toggle={toggle}></Navbar>
-      <MobileSidebar isOpen={isOpen} toggle={toggle}></MobileSidebar>
+      <Navbar
+        mobileMenuOpen={mobileMenuOpen}
+        mobileBtntoggle={mobileBtntoggle}
+      ></Navbar>
     </div>
   );
 };

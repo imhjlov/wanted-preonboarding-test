@@ -21,17 +21,18 @@ export const Icon = styled.div`
 export const MobileAside = styled.div`
   display: none;
 
-  @media screen and (max-width: 690px) {
+  @media screen and (max-width: 768px) {
     position: fixed;
-    z-index: 999;
     width: 100%;
     height: 100%;
     background: #0d0d0d;
     display: grid;
     top: 0;
     left: 0;
-    transition: 0.2s ease-in-out;
-    opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
+    height: 0;
+    opacity: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "100%" : "0")};
+    height: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "100%" : "0")};
+    z-index: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "999" : "-999")};
   }
 `;
 

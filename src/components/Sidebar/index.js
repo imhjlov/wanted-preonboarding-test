@@ -7,7 +7,8 @@ import {
   AsideLink,
   AsideBtnLink,
 } from "./SidebarElements";
-const Sidebar = () => {
+import MobileSidebar from "./MobileSidebar";
+const Sidebar = (handleMobileMenu) => {
   return (
     <div>
       <Aside>
@@ -27,6 +28,10 @@ const Sidebar = () => {
             <AsideBtnLink to="/">기업서비스</AsideBtnLink>
           </AsideItem>
         </AsideMenu>
+        <MobileSidebar
+          handleMobileMenuOpen={handleMobileMenu.handleMobileMenuOpen}
+          handleMobileBtntoggle={handleMobileMenu.handleMobileBtntoggle}
+        ></MobileSidebar>
       </Aside>
     </div>
   );

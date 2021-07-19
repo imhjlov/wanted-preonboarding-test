@@ -13,7 +13,7 @@ import {
 import Sidebar from "../Sidebar/index";
 import NavSub from "./NavSub";
 
-const Navbar = ({ toggle }) => {
+const Navbar = (handleMobileMenu) => {
   const [navSub, setNavSub] = useState(false);
 
   const showNavSub = () => setNavSub(true);
@@ -24,9 +24,6 @@ const Navbar = ({ toggle }) => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">wanted</NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
           <NavMenu>
             <NavItem>
               <NavLinks
@@ -59,7 +56,10 @@ const Navbar = ({ toggle }) => {
             closeNavSub={closeNavSub}
           ></NavSub>
         </NavbarContainer>
-        <Sidebar></Sidebar>
+        <Sidebar
+          handleMobileMenuOpen={handleMobileMenu.mobileMenuOpen}
+          handleMobileBtntoggle={handleMobileMenu.mobileBtntoggle}
+        ></Sidebar>
       </Nav>
     </div>
   );
