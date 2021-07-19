@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
-
-export const Aside = styled.aside``;
+import { FaBars, FaRegBell, FaUserCircle } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
+export const Aside = styled.aside`
+  padding: 10px 0;
+`;
 
 export const AsideMenu = styled.ul`
   display: flex;
@@ -38,29 +40,38 @@ export const AsideItem = styled.li`
   }
 `;
 
-export const AsideLink = styled(LinkS)`
+export const AsideButton = styled.button`
   color: #fff;
+  background-color: transparent;
+  border: 0;
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0 0.8rem;
-  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+
   cursor: pointer;
 `;
 
-export const FaSearch = styled.li``;
-
-export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+export const SearchIcon = styled(BiSearch)`
+  height: 1.7em;
+  width: 1.7em;
+`;
+export const NoticeIcon = styled(FaRegBell)`
+  height: 1.5em;
+  width: 1.5em;
+`;
+export const ProfileIcon = styled(FaUserCircle)`
+  height: 1.5em;
+  width: 1.5em;
+`;
+export const MenuIcon = styled(FaBars)`
+  height: 1.5em;
+  width: 1.5em;
 `;
 
 export const AsideBtnLink = styled(LinkR)`
-  display: flex;
+  display: block;
+
   border-radius: 50px;
   background: #fff;
   white-space: nowrap;
