@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MobileAsideLogo,
   MobileAsideWrap,
@@ -9,11 +9,11 @@ import {
   MobileAsideContainer,
   MobileAsidebarLink,
   Icon,
-  LogoImg,
+  AsideLogoImg,
   CloseIcon,
   ProfileIcon,
 } from "./MobileSidebarElements";
-
+import logoImg from "../../images/logo_wanted_img.jpg";
 import { MobileSidebarData } from "../../data/MobileSidebarData";
 
 const MobileSidebar = (handleMobileMenu) => {
@@ -34,8 +34,11 @@ const MobileSidebar = (handleMobileMenu) => {
       <MobileAside>
         <MobileAsideheader>
           <MobileAsideLogo>
-            <LogoImg />
+            <AsideLogoImg onClick={handleMobileMenu.handleMobileBtntoggle}>
+              <img src={logoImg} alt="로고" />
+            </AsideLogoImg>
           </MobileAsideLogo>
+
           <Icon onClick={handleMobileMenu.handleMobileBtntoggle}>
             <CloseIcon />
           </Icon>

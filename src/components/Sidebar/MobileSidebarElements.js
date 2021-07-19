@@ -8,7 +8,7 @@ export const MobileAsideWrap = styled.div`
   @media screen and (max-width: 768px) {
     position: fixed;
     width: 100%;
-    height: 500px;
+    height: 100%;
     background: #fff;
     top: 0;
     left: 0;
@@ -31,13 +31,16 @@ export const MobileAsideLogo = styled.div`
   display: inline-block;
 `;
 
-export const LogoImg = styled.image``;
+export const AsideLogoImg = styled.div`
+  cursor: pointer;
+`;
 
 export const Icon = styled.div`
   float: right;
   height: 100%;
   cursor: pointer;
 `;
+
 export const CloseIcon = styled(FaTimes)`
   color: #ddd;
   width: 1.5em;
@@ -45,6 +48,7 @@ export const CloseIcon = styled(FaTimes)`
 `;
 
 export const MobileAsideContainer = styled.div`
+  margin-top: 100px;
   color: #444;
 `;
 
@@ -54,7 +58,6 @@ export const MobileAsidebarMenuWrap = styled.ul`
   grid-template-rows: repeat(14, 44px);
   justify-content: start;
   list-style: none;
-  margin-top: 50px;
   align-items: center;
 `;
 export const MobileAsidebarMenuItem = styled.li`
