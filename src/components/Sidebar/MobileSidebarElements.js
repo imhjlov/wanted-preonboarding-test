@@ -1,8 +1,24 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
-import { FaTimes, FaUserCircle } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
-export const MobileAsideWrap = styled.div`
+export const MobileAsideLogo = styled.div``;
+
+export const CloseIcon = styled(FaTimes)`
+  color: #fff;
+`;
+
+export const Icon = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  margin-top: 30px;
+`;
+export const MobileAside = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -19,6 +35,7 @@ export const MobileAsideWrap = styled.div`
     z-index: ${({ mobileMenuOpen }) => (mobileMenuOpen ? "999" : "-999")};
   }
 `;
+<<<<<<< HEAD
 export const MobileAside = styled.div`
   padding: 20px;
 `;
@@ -45,16 +62,19 @@ export const CloseIcon = styled(FaTimes)`
   width: 1.5em;
   height: 1.5em;
 `;
+=======
+>>>>>>> parent of 462af18 (💄Design: 변경 html, css 구조)
 
-export const MobileAsideContainer = styled.div`
+export const MobileAsideWrapper = styled.div`
   color: #fff;
 `;
 
-export const MobileAsidebarMenuWrap = styled.ul`
+export const MobileAsidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(14, 44px);
   justify-content: start;
+<<<<<<< HEAD
   list-style: none;
   margin-top: 50px;
   align-items: center;
@@ -81,6 +101,8 @@ export const MobileAsidebarMenuItem = styled.li`
   &:nth-child(11) {
     color: #eee;
   }
+=======
+>>>>>>> parent of 462af18 (💄Design: 변경 html, css 구조)
 `;
 export const MobileAsidebarLink = styled(LinkS)`
   align-items: left;
@@ -93,6 +115,7 @@ export const MobileAsidebarLink = styled(LinkS)`
   cursor: pointer;
 `;
 
+<<<<<<< HEAD
 export const ProfileIcon = styled(FaUserCircle)`
   color: #ddd;
   width: 2em;
@@ -100,4 +123,18 @@ export const ProfileIcon = styled(FaUserCircle)`
   position: absolute;
   right: 0;
   margin-right: 20px;
+=======
+  &:nth-child(3) {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 45px;
+  }
+  &:nth-child(6) {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 45px;
+  }
+  &:nth-child(8) {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 45px;
+  }
+>>>>>>> parent of 462af18 (💄Design: 변경 html, css 구조)
 `;

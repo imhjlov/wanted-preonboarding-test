@@ -1,17 +1,11 @@
 import React from "react";
 import {
-  MobileAsideLogo,
-  MobileAsideWrap,
-  MobileAsideheader,
   MobileAside,
-  MobileAsidebarMenuWrap,
-  MobileAsidebarMenuItem,
-  MobileAsideContainer,
+  MobileAsidebarMenu,
+  MobileAsideWrapper,
   MobileAsidebarLink,
   Icon,
-  LogoImg,
   CloseIcon,
-  ProfileIcon,
 } from "./MobileSidebarElements";
 
 import { MobileSidebarData } from "../../data/MobileSidebarData";
@@ -30,24 +24,35 @@ const MobileSidebar = (handleMobileMenu) => {
   ));
 
   return (
+    <div>
+          <CloseIcon />
+        </Icon>
+        <MobileAsideWrapper>
+          <MobileAsidebarMenu>
+              wanted
+            </MobileAsidebarLink>
+            <br></br>
+              로그인
+            </MobileAsidebarLink>
+              이력서
+            </MobileAsidebarLink>
+              매치업
+            </MobileAsidebarLink>
     <MobileAsideWrap mobileMenuOpen={handleMobileMenu.handleMobileMenuOpen}>
-      <MobileAside>
-        <MobileAsideheader>
-          <MobileAsideLogo>
-            <LogoImg />
-          </MobileAsideLogo>
           <Icon onClick={handleMobileMenu.handleMobileBtntoggle}>
-            <CloseIcon />
-          </Icon>
-        </MobileAsideheader>
 
-        <MobileAsideContainer>
-          <MobileAsidebarMenuWrap>
-            {MobileAsidebarMenuMap}
-          </MobileAsidebarMenuWrap>
-        </MobileAsideContainer>
+              프리랜서
+            </MobileAsidebarLink>
+              직군별 연봉
+            </MobileAsidebarLink>
+              커리어 성장
+            </MobileAsidebarLink>
+              기업 서비스
+            </MobileAsidebarLink>
+          </MobileAsidebarMenu>
+        </MobileAsideWrapper>
       </MobileAside>
-    </MobileAsideWrap>
+    </div>
   );
 };
 
