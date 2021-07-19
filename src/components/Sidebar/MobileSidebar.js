@@ -7,22 +7,7 @@ import {
   Icon,
   CloseIcon,
 } from "./MobileSidebarElements";
-
-import { MobileSidebarData } from "../../data/MobileSidebarData";
-
 const MobileSidebar = (handleMobileMenu) => {
-  const MobileAsidebarMenuMap = MobileSidebarData.map((item, index) => (
-    <MobileAsidebarMenuItem to={item.path} key={index}>
-      <MobileAsidebarLink
-        to="/"
-        onClick={handleMobileMenu.handleMobileBtntoggle}
-      >
-        {item.title}
-        {index === 0 ? <ProfileIcon /> : ""}
-      </MobileAsidebarLink>
-    </MobileAsidebarMenuItem>
-  ));
-
   return (
     <div>
           <CloseIcon />
