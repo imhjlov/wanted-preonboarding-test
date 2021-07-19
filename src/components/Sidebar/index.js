@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Aside,
@@ -13,21 +13,51 @@ import {
 } from "./SidebarElements";
 import MobileSidebar from "./MobileSidebar";
 const Sidebar = (handleMobileMenu) => {
+  const [contentsIsOpen, setContentsIsOpen] = useState(" ");
+  const [contentsIsClose, setContentsIsClose] = useState(" ");
+
+  const asideBtntoggle = (clickedBtn) => {
+    if (clickedBtn === contentsIsOpen) {
+      setContentsIsClose(clickedBtn);
+      setContentsIsOpen(" ");
+      return;
+    } else {
+      setContentsIsClose(contentsIsOpen);
+      setContentsIsOpen(clickedBtn);
+    }
+  };
+
   return (
     <>
       <Aside>
         <AsideMenu>
-          <AsideItem>
+          <AsideItem
+            data-msg={"serch"}
+            onClick={asideBtntoggle.bind(null, "serch")}
+            contentsIsOpen={contentsIsOpen}
+            contentsIsClose={contentsIsClose}
+          >
             <AsideButton>
               <SearchIcon />
             </AsideButton>
           </AsideItem>
-          <AsideItem>
+          <AsideItem
+            data-msg={"notice"}
+            onClick={asideBtntoggle.bind(null, "notice")}
+            contentsIsClose={contentsIsClose}
+            contentsIsOpen={contentsIsOpen}
+          >
             <AsideButton>
               <NoticeIcon />
             </AsideButton>
           </AsideItem>
-          <AsideItem>
+          <AsideItem
+            className="profile"
+            data-msg={"profile"}
+            onClick={asideBtntoggle.bind(null, "profile")}
+            contentsIsClose={contentsIsClose}
+            contentsIsOpen={contentsIsOpen}
+          >
             <AsideButton>
               <ProfileIcon />
             </AsideButton>

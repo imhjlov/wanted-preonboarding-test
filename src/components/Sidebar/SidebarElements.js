@@ -2,15 +2,17 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { FaBars, FaRegBell, FaUserCircle } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
+
 export const Aside = styled.aside`
-  padding: 10px 0;
+  height: 100%;
 `;
 
 export const AsideMenu = styled.ul`
   display: flex;
-  align-items: center;
   list-style: none;
   text-align: center;
+  height: 100%;
+  align-items: center;
   @media screen and (max-width: 768px) {
     position: absolute;
     right: 0;
@@ -19,16 +21,35 @@ export const AsideMenu = styled.ul`
   }
 `;
 export const AsideItem = styled.li`
-  color: #333;
-  padding: 5px;
-  margin: 5px;
+  padding: 6px 3px;
   border-radius: 50%;
+  margin-left: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+  &:nth-child(2) {
+    background-color: ${({ contentsIsOpen, contentsIsClose }) =>
+      contentsIsOpen === "notice"
+        ? "#36f"
+        : contentsIsClose === "notice"
+        ? "#fff"
+        : ""};
+  }
+
+  &:nth-child(3) {
+    padding: 0;
+    border: ${({ contentsIsOpen, contentsIsClose }) =>
+      contentsIsOpen === "profile"
+        ? "1px solid #36f"
+        : contentsIsClose === "profile"
+        ? "1px solid #fff"
+        : ""};
+  }
+
   &:nth-child(5) {
     display: none;
   }
-  &:nth-child(2):active {
-    background-color: #36f;
-  }
+
   @media screen and (max-width: 768px) {
     &:nth-child(n + 3):nth-child(-n + 4) {
       display: none;
@@ -40,15 +61,14 @@ export const AsideItem = styled.li`
 `;
 
 export const AsideButton = styled.button`
-  color: #333;
   background-color: transparent;
   border: 0;
   display: flex;
   align-items: center;
   text-align: center;
   margin: 0 auto;
-
   cursor: pointer;
+  padding: 0 5px;
 `;
 
 export const SearchIcon = styled(BiSearch)`
@@ -58,13 +78,10 @@ export const SearchIcon = styled(BiSearch)`
 export const NoticeIcon = styled(FaRegBell)`
   height: 1.5em;
   width: 1.5em;
-  &:active {
-    color: #fff;
-  }
 `;
 export const ProfileIcon = styled(FaUserCircle)`
-  height: 1.5em;
-  width: 1.5em;
+  height: 2.6em;
+  width: 2em;
 `;
 export const MenuIcon = styled(FaBars)`
   height: 1.5em;

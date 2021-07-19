@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import MobileSidebar from "../components/Sidebar/MobileSidebar";
 
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
