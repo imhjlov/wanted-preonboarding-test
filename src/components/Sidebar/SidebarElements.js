@@ -36,7 +36,7 @@ export const AsideItem = styled.li`
         : ""};
   }
 
-  &:nth-child(3) {
+  &:nth-child(4) {
     padding: 0;
     border: ${({ contentsIsOpen, contentsIsClose }) =>
       contentsIsOpen === "profile"
@@ -46,15 +46,15 @@ export const AsideItem = styled.li`
         : ""};
   }
 
-  &:nth-child(5) {
+  &:nth-child(7) {
     display: none;
   }
 
   @media screen and (max-width: 768px) {
-    &:nth-child(n + 3):nth-child(-n + 4) {
+    &:nth-child(n + 3):nth-child(-n + 6) {
       display: none;
     }
-    &:nth-child(5) {
+    &:nth-child(7) {
       display: block;
     }
   }
@@ -78,6 +78,12 @@ export const SearchIcon = styled(BiSearch)`
 export const NoticeIcon = styled(FaRegBell)`
   height: 1.5em;
   width: 1.5em;
+  color: ${({ contentsIsOpen, contentsIsClose }) =>
+    contentsIsOpen === "notice"
+      ? "#fff"
+      : contentsIsClose === "notice"
+      ? "#333"
+      : ""};
 `;
 export const ProfileIcon = styled(FaUserCircle)`
   height: 2.6em;

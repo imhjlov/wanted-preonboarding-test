@@ -12,14 +12,17 @@ import {
   MenuIcon,
 } from "./SidebarElements";
 import MobileSidebar from "./MobileSidebar";
+import NoticeModal from "../modals/NoticeModal";
+import ProfileModal from "../modals/ProfileModal";
+
 const Sidebar = (handleMobileMenu) => {
-  const [contentsIsOpen, setContentsIsOpen] = useState(" ");
-  const [contentsIsClose, setContentsIsClose] = useState(" ");
+  const [contentsIsOpen, setContentsIsOpen] = useState("");
+  const [contentsIsClose, setContentsIsClose] = useState("");
 
   const asideBtntoggle = (clickedBtn) => {
     if (clickedBtn === contentsIsOpen) {
       setContentsIsClose(clickedBtn);
-      setContentsIsOpen(" ");
+      setContentsIsOpen("");
       return;
     } else {
       setContentsIsClose(contentsIsOpen);
@@ -38,7 +41,7 @@ const Sidebar = (handleMobileMenu) => {
             contentsIsClose={contentsIsClose}
           >
             <AsideButton>
-              <SearchIcon />
+              <SearchIcon></SearchIcon>
             </AsideButton>
           </AsideItem>
           <AsideItem
@@ -48,20 +51,32 @@ const Sidebar = (handleMobileMenu) => {
             contentsIsOpen={contentsIsOpen}
           >
             <AsideButton>
-              <NoticeIcon />
+              <NoticeIcon
+                contentsIsClose={contentsIsClose}
+                contentsIsOpen={contentsIsOpen}
+              ></NoticeIcon>
             </AsideButton>
           </AsideItem>
+          <NoticeModal
+            contentsIsClose={contentsIsClose}
+            contentsIsOpen={contentsIsOpen}
+          ></NoticeModal>
           <AsideItem
-            className="profile"
             data-msg={"profile"}
             onClick={asideBtntoggle.bind(null, "profile")}
             contentsIsClose={contentsIsClose}
             contentsIsOpen={contentsIsOpen}
           >
             <AsideButton>
-              <ProfileIcon />
+              <ProfileIcon></ProfileIcon>
             </AsideButton>
           </AsideItem>
+          <ProfileModal
+            handleMobileMenuOpen={handleMobileMenu.handleMobileMenuOpen}
+            handleMobileBtntoggle={handleMobileMenu.handleMobileBtntoggle}
+            contentsIsClose={contentsIsClose}
+            contentsIsOpen={contentsIsOpen}
+          ></ProfileModal>
           <AsideItem>
             <AsideBtnLink to="/">기업서비스</AsideBtnLink>
           </AsideItem>
