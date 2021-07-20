@@ -1,9 +1,7 @@
 # 원티드 GNB(Global Navitaion Bar)를 React 기반으로 클론 코딩 과제
 
 ## 과제 내용
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e59772a-e066-4ad7-bf3a-e3b5e04eb62c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e59772a-e066-4ad7-bf3a-e3b5e04eb62c/Untitled.png)
-
+원티드 홈페이지의 GNB(Global Navitaion Bar) 구현
 - 라이브러리를 사용할 경우, 선택 이유를 작성해주세요.
 - 반응형은 필수로 구현해주세요.
 - 참고 사항
@@ -15,3 +13,9 @@
         - 메뉴 영역 이외(dim 처리된 부분)에 회사 목록 등의 내용은 구현하지 않으셔도 됩니다.
 
 - Github Repository 주소를 제출해주세요.
+
+## 사용한 라이브러리
+
+- styled-component : 별도의 CSS파일 첨부 없이도 자유롭게 CSS 커스텀 컴포넌트를 만드는데에 사용하기 편해서 사용하였습니다.
+- react-router-dom : 페이지 이동을 하기 위해 사용합니다. 이번 과제에서는 페이지 이동은 없지만 그러한 효과를 주기 위해 사용했습니다.
+- react-icons : 별도의 이미지 저장 없이 import하여 아이콘을 자유롭게 쓰기 위해 사용하였습니다.
